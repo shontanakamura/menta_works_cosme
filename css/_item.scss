@@ -1,0 +1,106 @@
+.item {
+  max-width: 1004px;
+  margin: 0 auto;
+  &-ttl {
+    h2 {
+      @include Mon($colorBlack,48px,700);
+      font-weight: bold;
+      position: relative;
+      margin-bottom: 35px;
+    }
+    h2::before {
+      content:"";
+      display:block;
+      width: 69px;
+      height: 5px;
+      background-color:$colorBlack;
+      position:absolute;
+      bottom:-10px;
+      left:0;
+    }
+    p {
+      @include Mon($colorBlack,16px,700);
+      margin-bottom: 23px;
+    }
+  }
+
+  &-group {
+    display: flex;
+    justify-content: space-between;
+    &__list {
+      max-width: 324px;
+      p:first-of-type {
+        margin-bottom: 16px;
+        font-weight: bold;
+        @include Mon($colorBlack,16px,700);
+      }
+      h3 {
+        font-weight: bold;
+        @include Mon($colorBlack,24px,700);
+        display: inline-block;
+        margin-bottom: 23px;
+      }
+      p:nth-child(2) {
+        @include Yugo($colorBlack,24px,700);
+      }
+    }
+    &__list:last-child {
+      margin: 0;
+    }
+  }
+}
+
+@media screen and (max-width:480px) {
+  .item {
+    max-width: 345px;
+    margin: 0 auto;
+    &-ttl {
+      margin-left: 15px;
+      h2 {
+        @include Mon($colorBlack,38px,1000);
+        font-weight: bold;
+        position: relative;
+        margin-bottom: 33px;
+      }
+      h2::before {
+        content:"";
+        display:block;
+        width: 69px;
+        height: 5px;
+        bottom: -15px;
+        left: 0;
+      }
+      p {
+        @include Mon($colorBlack,12px,700);
+        margin-bottom: 23px;
+      }
+    }
+
+    &-group {
+      display: block;
+      justify-content: center;
+      &__list {
+        max-width: 324px;
+        margin: 0 auto;
+        margin-bottom: 30px;
+        p:first-of-type {
+          margin-bottom: 16px;
+          font-weight: bold;
+          @include Mon($colorBlack,12px,700);
+        }
+        h3 {
+          font-weight: bold;
+          @include Mon($colorBlack,24px,700);
+        }
+        p:nth-of-type(2) {
+          @include Yugo($colorBlack,12px,1000);
+          line-height: 24px;
+        }
+      }
+      &__list:last-child {
+        margin: 0 auto;
+        margin-bottom: 120px;
+      }
+    }
+  }
+}

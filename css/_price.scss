@@ -1,0 +1,189 @@
+  .price {
+    width: 100%;
+    display: flex;
+    max-width: 1004px;
+    margin: 0 auto;
+    padding-top: 194px;
+    .backImg {
+      background: url(../img/jazmin-quaynor-470729-unsplash.png);
+      background-position: right 100px;
+      background-repeat: no-repeat;
+      width: 100%;
+      padding-bottom: 420px;
+      margin-bottom: 120px;
+      .price-content {
+        width: 494px;
+        padding-bottom: 64.7px;
+        background-color:rgba(255,255,255,0.8);
+        border: #A38787 5px solid;
+        position: relative;
+        z-index: 1;
+        &__ttl {
+          margin: 0 auto;
+          margin-top: 55px;
+          margin-bottom: 81px;
+          max-width: 132px;
+          text-align: center;
+          h2 {
+            @include Mon($colorBlack,48px,700);
+            font-weight: bold;
+            position: relative;
+          }
+          h2::before {
+            content:"";
+            display:block;
+            width: 69px;
+            height: 5px;
+            background-color:$colorBlack;
+            position:absolute;
+            bottom:-3px;
+            left:26px;
+          }
+          p {
+            @include Yugo($colorBlack,16px,700);
+            font-weight: bold;
+            margin-top: 18px;
+          }
+        }
+        &__list {
+          table {
+            max-width: 324px;
+            margin: 0 auto;
+            tr {
+              .name {
+              color: $colorBlack;
+              width: 154px;
+              text-align: left;
+              border-bottom: dashed 1px $colorGrayf;
+              padding: 6px 0 6px 0;
+              display: inline-block;
+              }
+              .name-last {
+                color: $colorBlack;
+                width: 154px;
+                text-align: left;
+                border-bottom: none;
+                padding: 6px 0 6px 0;
+                display: inline-block;
+              }
+              .menu-price {
+                color: $colorBlack;
+                font-weight: bold;
+                width: 154px;
+                text-align: right;
+                border-bottom: dashed 1px $colorGrayf;
+                padding: 6px 0 6px 0;
+                display: inline-block;
+              }
+              .menu-price-last
+              {
+                color: $colorBlack;
+                font-weight: bold;
+                width: 154px;
+                text-align: right;
+                border-bottom: none;
+                padding: 6px 0 6px 0;
+                display: inline-block;
+              }
+            }
+          }
+        }
+      }
+    }
+  }//price
+
+
+@media screen and (max-width:480px) {
+  .price {
+    display: flex;
+    height: auto;
+    position: relative;
+    margin: 0 auto;
+    margin-bottom: 0;
+    padding-top: 0;
+    .backImg {
+      background: url(../img/jazmin-quaynor-470729-unsplash.png);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      width: 100%;
+      padding-bottom: 49px;
+      .price-content {
+        width: 95%;
+        border: #A38787 5px solid;
+        z-index: 1;
+        margin: 0 auto;
+        margin-top: 48px;
+        padding-bottom: 64.7px;
+        &__ttl {
+          margin: 0 auto;
+          margin-top: 55px;
+          margin-bottom: 81px;
+          max-width: 132px;
+          text-align: center;
+          h2 {
+            @include Mon($colorBlack,38px,700);
+            font-weight: bold;
+            position: relative;
+          }
+          h2::before {
+            content:"";
+            display:block;
+            width: 69px;
+            height: 5px;
+            background-color:$colorBlack;
+            position:absolute;
+            bottom:-3px;
+            left:26px;
+          }
+          p {
+            @include Yugo($colorBlack,12px,700);
+            font-weight: bold;
+            margin-top: 18px;
+          }
+        }
+        &__list {
+          table {
+            max-width: 223px;
+            margin: 0 auto;
+            tr {
+              .name {
+              @include Yugo($colorBlack,12px,700);
+              width: 111px;
+              text-align: left;
+              border-bottom: dashed 1px $colorGrayf;
+              padding: 6px 0 6px 0;
+              display: inline-block;
+              }
+              .name-last {
+                @include Yugo($colorBlack,12px,700);
+                width: 111px;
+                text-align: left;
+                border-bottom: none;
+                padding: 6px 0 6px 0;
+                display: inline-block;
+              }
+              .menu-price {
+                @include Yugo($colorBlack,12px,700);
+                width: 111px;
+                text-align: right;
+                border-bottom: dashed 1px $colorGrayf;
+                padding: 6px 0 6px 0;
+                display: inline-block;
+              }
+              .menu-price-last
+              {
+                @include Yugo($colorBlack,12px,700);
+                width: 111px;
+                text-align: right;
+                border-bottom: none;
+                padding: 6px 0 6px 0;
+                display: inline-block;
+              }
+            }
+          }
+        }
+      }
+    }
+  }//price
+}
